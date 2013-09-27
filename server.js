@@ -15,7 +15,7 @@ var twit = new twitter({
 var server = http.createServer(function(request, response) {
   response.writeHead(200, {"Content-Type": "application/json"});
 
-  twit.get("/statuses/user_timeline.json", { screen_name: "FennecNightly", count: 5 }, function(tweets) {
+  twit.get("/statuses/user_timeline.json", { screen_name: "AaronMT", count: 5 }, function(tweets) {
     var messages = [];
     for (var i = 0; i < tweets.length; i++) {
       var tweet = tweets[i];
